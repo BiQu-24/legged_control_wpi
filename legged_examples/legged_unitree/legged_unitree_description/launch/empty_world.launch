@@ -12,7 +12,8 @@
         <arg name="world_name" value="$(find legged_gazebo)/worlds/empty_world.world"/>
     </include>
     <!-- push robot_description to factory and spawn robot in gazebo -->
+    <!-- 0.2 best initial value!!!! -->
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" clear_params="true"
-          args="-z 0.5 -param legged_robot_description -urdf -model $(arg robot_type)" output="screen"/>
+          args="-z 0.2 -param legged_robot_description -urdf -model $(arg robot_type)" output="screen"/>
 
 </launch>
