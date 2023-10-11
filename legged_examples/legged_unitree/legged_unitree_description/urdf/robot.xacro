@@ -11,6 +11,11 @@
 
     <xacro:include filename="$(find legged_unitree_description)/urdf/$(arg robot_type)/const.xacro"/>
 
+    <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+        <xacro:sensor_d435 name="camera" parent="base">
+        <origin xyz="0.25 0 0.1" rpy="0 0 0"/>
+    </xacro:sensor_d435>
+
 
     <link name="base">
         <visual>
